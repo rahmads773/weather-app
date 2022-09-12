@@ -1,0 +1,161 @@
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(img/tom-winckels-I7oLRdM9YIw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  /* small screens */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* meduim screens */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* large screens */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* end global rules */
+/* start card */
+.card{
+  background-color: rgb(0 0 0 / 60%);
+  color: white;
+  padding: 2rem;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 490px;
+  margin: 0 20px;
+  backdrop-filter: blur( 8px );
+  -webkit-backdrop-filter: blur( 8px );
+}
+@media (max-width:400px) {
+  .card{
+    width: 90%;
+    text-align: center;
+  }
+}
+/* start search */
+.card .search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:15px;
+  flex-wrap: wrap;
+}
+.card .search input[type="text"]{
+  padding: 0.5rem 2rem;
+  background-color: #ededed96;
+  color: black;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  flex: 1;
+  outline: none;
+  font-size: 20px;
+  max-width: 100%;
+}
+.card .search input[type="text"]::placeholder{
+  color: black;
+  font-weight: normal;
+  transition: .3s;
+}
+.card .search input[type="text"]:focus::placeholder{
+opacity: 0;
+}
+.card .search button {
+  background-color: #ededed96;
+  border: none;
+  outline: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+}
+.card .search button:hover{
+background-color: #ffffffb3;
+}
+/* end search */
+/* start weather */
+.weather.loading{
+  visibility: hidden;
+  position: relative;
+  max-height: 200px;
+}
+.weather.loading::before{
+  content: "Weather Loading...";
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 25px;
+  width: 100%;
+  font-weight: bold;
+}
+.card .weather .city{
+  margin: 30px 0;
+  font-size: 30px;
+}
+.card .weather .temp{
+  margin: 0 0 20px;
+  font-size: 40px;
+}
+.card .flex{
+  margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+@media (max-width:400px){
+  .card .flex{
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+.card .Humidity{
+  margin-bottom: 10px;
+}
+.card .flex .description{
+  text-transform: capitalize;
+}
+.card .flex .description,.card .Humidity,.card .wind{
+  font-size: 22px;
+}
+/* end weather */
+/* end card */

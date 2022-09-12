@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="https://openweathermap.org/img/wn/02n.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="main.js"></script>
+</head>
+<body>
+   <div class="card">
+
+   <div class="search">
+    <input type="text" placeholder="Search" class="search-bar">
+    <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+   </div>
+
+<div class="weather loading">
+    <h1 class="city">Weather in Denver</h1>
+<h2 class="temp">19°C</h2>
+<div class="flex">
+    <img src="https://openweathermap.org/img/wn/02n.png" alt="img" class="icon">
+    <div class="description">Sunny</div>
+</div>
+<div class="Humidity">Humidity: 53%</div>
+<div class="wind">Wind Speed: 10 km/h</div>
+</div>
+   </div> 
+</body>
+</html>
